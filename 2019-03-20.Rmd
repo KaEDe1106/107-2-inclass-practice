@@ -17,3 +17,28 @@ cat(dialogue, sep="\n")
 
 ```
 
+```{r}
+aLogical <- c(T,TRUE,F,FALSE,FALSE)
+
+sum(aLogical)
+```
+
+```{r}
+studentMajors <- factor(
+  c("經濟系", "經濟系", "法律系")
+)
+```
+
+```{r}
+birthplace <- factor(
+  c("新竹縣" , "台北市", "台北市", "台中市" ,"新竹縣" ,"台中市" , "台中市" , "新竹縣")
+)
+
+levels(birthplace)
+
+as.integer(birthplace)
+integerbirthplace <- as.integer(birthplace)
+
+sum(integerbirthplace)
+```
+
