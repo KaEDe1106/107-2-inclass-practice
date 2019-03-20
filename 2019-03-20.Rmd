@@ -42,3 +42,27 @@ integerbirthplace <- as.integer(birthplace)
 sum(integerbirthplace)
 ```
 
+
+以上是factor
+以下是時間
+
+
+```{r}
+library(lubridate)
+WhatTimeIsIt <- ymd_hms("2018-11-06 12:05:56")
+```
+
+
+```{r}
+typeof(WhatTimeIsIt)
+```
+
+```{r}
+as.double(WhatTimeIsIt)
+```
+
+```{r}
+WhatTimeIsIt
+```
+
+
