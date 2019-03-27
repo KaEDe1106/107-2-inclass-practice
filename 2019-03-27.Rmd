@@ -61,9 +61,17 @@ twDateTime1 <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
 twDateTime1
 twDateTime1 + 5648653123
 
-twDT2 <- ymd_hms("2019-03-20 14:04:00", tz="Asia/Taipei")
+twDT2 <- ymd_hms("2019-03-20 14:04:09", tz="Asia/Taipei")
 twDT2
 
-twDateTime1 + twDT2
+twDateTime1 - twDT2
+as.double(twDateTime1 - twDT2)
 ```
+
+```{r}
+DDD <- ymd("1999-02-01")
+DDD + years(100)
+DDD + dyears(100)
+```
+
 
