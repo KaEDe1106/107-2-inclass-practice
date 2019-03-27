@@ -74,4 +74,22 @@ DDD + years(100)
 DDD + dyears(100)
 ```
 
+```{r}
+x1 <- 3
+x1L <-3L
+
+xxx <- c(1,5,10)
+xxxna <- c(NA,5,10)
+yyy <- c(0,2,8)
+xxx1 <- c(5,5,10,8)
+
+x1 == x1L
+xxx>yyy
+xxx1 %in% xxx
+sum(xxx)
+sum(xxxna)
+sum(xxxna, na.rm = TRUE)
+xxx == xxxna
+is.na(xxxna) 
+```
 
