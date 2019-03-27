@@ -9,3 +9,27 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+NYDateTime <- with_tz(twDateTime,tzone="America/New_York")
+
+
+as.double(twDateTime)
+as.double(NYDateTime)
+
+twDateTime
+NYDateTime
+
+```
+
+
+```{r}
+Google <- mdy_hms("03-18-2019 14:04:00", tz="Asia/Taipei")
+Google
+```
+```{r}
+today <- ymd("2018-09-11")
+today
+today1 <- mdy("March 3, 2019")
+today1
+```
