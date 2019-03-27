@@ -69,3 +69,14 @@ WhatTimeIsIt
 ```{r}
 Sys.timezone()
 ```
+
+
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+LisbonDateTime
+```
+
+
+
+
