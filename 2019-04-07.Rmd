@@ -30,7 +30,9 @@ levels(currency)
 length(levels(currency))
 ```
 
+想知道一堆資料中有幾筆資料是"日圓"
+利用sum函數
 ```{r}
-
+sum(currency == "日圓JPY/USD")
 ```
 
