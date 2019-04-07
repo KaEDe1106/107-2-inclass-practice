@@ -1,0 +1,36 @@
+---
+title: '2019-04-07'
+author: "KaEDe"
+date: "2019年4月7日"
+output: html_document
+---
+
+```{r}
+library(readr)
+exData2 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData2.csv")
+currency <- exData2$幣別
+```
+給你一大筆資料 head代表頭6個資料
+發現currency是character
+轉成factor才能看levels
+```{r}
+head(currency)
+class(currency)
+levels(currency)
+```
+
+
+```{r}
+currency <- as.factor(currency)
+class(currency)
+levels(currency)
+```
+裡面有幾種資料?
+```{r}
+length(levels(currency))
+```
+
+```{r}
+
+```
+
