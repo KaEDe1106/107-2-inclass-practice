@@ -63,10 +63,11 @@ fac.adress %in% greatTaipei
 
 文氏圖的概念:
 居住於大台北地區的男生?
+第幾筆資料符合?
 ```{r}
 (adress %in% greatTaipei)
 (gender == "男")
 (adress %in% greatTaipei) & (gender == "男")
-
+which((adress %in% greatTaipei) & (gender == "男"))
 ```
 
