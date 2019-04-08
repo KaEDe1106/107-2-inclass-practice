@@ -71,3 +71,13 @@ fac.adress %in% greatTaipei
 which((adress %in% greatTaipei) & (gender == "男"))
 ```
 
+練習:男生或非大台北地區的人?
+已知答案為1234
+```{r}
+!(adress %in% greatTaipei) | (gender == "男")
+```
+正確
+
+
+
+
