@@ -74,10 +74,19 @@ which((adress %in% greatTaipei) & (gender == "男"))
 練習:男生或非大台北地區的人?
 已知答案為1234
 ```{r}
+adress
+gender
 !(adress %in% greatTaipei) | (gender == "男")
 ```
-正確
 
+
+男生或住在大台北地區的，但是要排除住在大台北地區的男生
+使用xor(男生,住在大台北)
+```{r}
+gender
+adress
+xor(gender == "男" , adress %in% greatTaipei)
+```
 
 
 
