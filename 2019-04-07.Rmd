@@ -120,3 +120,30 @@ sum(isAfter19800801)
 ```
 因為class(isAfter19800801)是logical
 所以可以sum
+
+
+3.資料中有幾筆歐元USD/EUR?
+```{r}
+isEURO <- currency == "歐元USD/EUR"
+sum(isEURO)
+```
+
+4.exchangeRate中有多少筆NA
+
+自己練習
+```{r}
+sum(is.na(exchangeRate))
+```
+
+5.排除na後，幣別為歐元的有幾筆?
+
+自己練習
+```{r}
+sum((currency == "歐元USD/EUR") & !(exchangeRate == NA))
+```
+
+以上錯誤 判斷是否na用isna
+```{r}
+sum((currency == "歐元USD/EUR") & !is.na(exchangeRate))
+```
+
