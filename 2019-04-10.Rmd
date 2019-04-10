@@ -100,6 +100,14 @@ answer2
 ```
 
 
+```{r}
+mylist <- list(
+  第一個=5,
+  a2=3,
+  a3= "呵呵"
+)
+mylist
+```
 
 
 
