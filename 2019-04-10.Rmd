@@ -17,3 +17,19 @@ str_subset(course,"經濟學")
 str_detect(course,"經濟學")
 ```
 
+```{r}
+drinks <- c("啤酒", "牛奶" , "高粱酒" , "優酪乳", "葡萄酒")
+str_subset(drinks,"酒")
+!str_detect(drinks,"酒")
+```
+
+```{r}
+studentID<-c(
+  '410177115','410176080','410174233','410177011','410182045','410176014')
+
+major <-str_sub(studentID,5,6)
+major
+year <- str_sub(studentID,2,4) 
+year
+```
+
