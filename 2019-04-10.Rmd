@@ -46,6 +46,7 @@ str_c(hour , minute , sep = ":")
 ```{r}
 dates <- c("3-11", "4-5",  "2-7")
 str_split(dates,"-")
+str_replace(dates,"-","月")
 ```
 
 
