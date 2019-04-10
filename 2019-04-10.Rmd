@@ -43,3 +43,9 @@ str_c(hour ,"點" , minute , "分")
 str_c(hour , minute , sep = ":")
 ```
 
+```{r}
+dates <- c("3-11", "4-5",  "2-7")
+str_split(dates,"-")
+```
+
+
