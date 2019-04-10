@@ -11,7 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(stringr)
+course <- c("個體經濟學","投資學","總體經濟學")
 
-
+str_subset(course,"經濟學")
+str_detect(course,"經濟學")
 ```
 
