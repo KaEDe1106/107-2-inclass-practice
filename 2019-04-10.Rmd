@@ -33,3 +33,13 @@ year <- str_sub(studentID,2,4)
 year
 ```
 
+```{r}
+hour <- c("5","18", "2" , "3")
+word1 <- c("點","點","點","點")
+minute <- c("22","09","59", "01")
+word2 <- c("分","分","分","分")
+str_c(hour , word1 , minute , word2)
+str_c(hour ,"點" , minute , "分")
+str_c(hour , minute , sep = ":")
+```
+
