@@ -68,3 +68,21 @@ refrigirator[["drinks"]]
 refrigirator[[1]]
 ```
 
+```{r}
+your_github_username <- "KaEDe1106"
+your_practice_reponame <- "107-2-inclass-practice"
+library(httr)
+library(stringr)
+str_replace_all(
+  "https://api.github.com/repos/:owner/:repo/commits",
+  c(
+    ":owner"=your_github_username,
+    ":repo"=your_practice_reponame
+    )
+  ) -> commitCheckStatement
+commitCheck <- content(GET(commitCheckStatement))
+commitCheck
+
+```
+
+
