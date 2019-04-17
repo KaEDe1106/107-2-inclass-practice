@@ -61,3 +61,10 @@ aba[[1]]
 aba[[1]][[1]]
 ```
 
+使用$
+```{r}
+refrigirator$drinkS
+refrigirator[["drinks"]]
+refrigirator[[1]]
+```
+
