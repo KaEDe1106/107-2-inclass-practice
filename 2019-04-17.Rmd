@@ -23,3 +23,9 @@ refrigirator[[1]][[1]]
 refrigirator[["drinkS"]][[1]]
 ```
 
+若想拿出所有的青菜及水果
+```{r}
+refrigirator[c("fruit","vegetable")]
+```
+
+
