@@ -28,4 +28,15 @@ refrigirator[["drinkS"]][[1]]
 refrigirator[c("fruit","vegetable")]
 ```
 
+用[  ] 會保有原來的class
+所以出來的東西還是list
+```{r}
+a <- refrigirator[c("fruit","vegetable")]
+aa <- refrigirator[[1]]
+aaa <- refrigirator[1]
+class(a)
+class(aa)
+class(aaa)
+```
+
 
