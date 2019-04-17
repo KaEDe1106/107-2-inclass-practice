@@ -1,0 +1,25 @@
+---
+title: '2019-04-17'
+author: "KaEDe"
+date: "2019年4月17日"
+output: html_document
+---
+
+```{r}
+refrigirator <- list(
+  drinkS = c("麒麟","虎牌","雪山","金牌"),
+  fruit = c("蘋果","番茄","鳳梨"),
+  vegetable = c("小白菜","高麗菜","菠菜","空心菜")
+)
+refrigirator
+
+refrigirator[[1]]
+refrigirator[["vegetable"]]
+```
+
+若只想取麒麟出來
+```{r}
+refrigirator[[1]][[1]]
+refrigirator[["drinkS"]][[1]]
+```
+
