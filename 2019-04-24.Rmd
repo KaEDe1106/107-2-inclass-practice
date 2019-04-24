@@ -56,9 +56,18 @@ matObj1[3,2]
 matObj1[c(1,4,2),c(5,3,3)]
 ```
 
-```{r}
 
+課堂練習
+```{r}
+library(readr)
+classSurvey <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv")
 ```
+取出性別，學分數
+
+```{r}
+classSurvey[,c(4,5)]
+```
+
 
 
 
