@@ -45,3 +45,12 @@ StuDF2 <- data.frame(
 StuDF2 
 ```
 
+
+```{r}
+chosenLETTERS <- LETTERS[5:24]
+matObj1 <- matrix(chosenLETTERS,4,5)
+matObj1
+matObj1[7]
+matObj1[3,2]
+```
+
