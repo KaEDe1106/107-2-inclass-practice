@@ -66,5 +66,38 @@ exData3[isAsiaCrisis,]
 
 
 
+```{r}
+library(readr)
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+```
+
+```{r}
+names(transcriptDataFinal)
+```
+選出學號為“92aS67fee”的子樣本
+```{r}
+log1 <-transcriptDataFinal$學號 == "92aS67fee"
+transcriptDataFinal[log1,]
+```
+
+```{r}
+utility_cobb_douglass <- function(x,y,z){
+  utilValue <- (x*(y^z)+y*(x^z))^(1/z) # 程序產生output值
+  return(utilValue) # 傳回output值
+}
+
+utility_cobb_douglass(225,5,pi)
+
+v <- function(r,h){
+  cir <- (pi*r^2)*h
+  return(cir)
+}
+v(330,5)
+```
+
+
+
+
+
 
 
