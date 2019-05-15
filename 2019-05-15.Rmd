@@ -95,6 +95,18 @@ v <- function(r,h){
 v(330,5)
 ```
 
+```{r}
+supply_fun <- function(a,b,P){
+  Qs <- a+b*P
+  return(Qs)
+}
+demand_fun <- function(c,d,P){
+  Qd <- c-d*P
+  return(Qd)
+}
+supply_fun(0,1,1)
+demand_fun(5,1,1)
+```
 
 
 
