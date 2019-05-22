@@ -23,3 +23,12 @@ invoiceList$UTC時間[log2] <- with_tz(nytz,tzone="UTC")
 invoiceList
 ```
 
+```{r}
+ymd_hms_tzChange <- function(input,fromTzone,toTzone){
+  time1 <- ymd_hms(input,tz=fromTzone)
+  answer <- with_tz(time1,tzone = toTzone)
+  return(answer)
+}
+ymd_hms_tzChange("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
+```
+
