@@ -1,0 +1,25 @@
+---
+title: '2019-05-22'
+author: "KaEDe"
+date: "2019年5月22日"
+output: html_document
+---
+
+```{r}
+library(readr)
+invoiceList <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/invoiceList.csv",
+col_types = cols(訂單時間.以訂單時區顯示. = col_character()))
+names(invoiceList)[[2]] <- "訂單時區之下單時間"
+```
+
+```{r}
+library(lubridate)
+log1 <- invoiceList$訂單時區 == "Asia/Taipei"
+log2 <- invoiceList$訂單時區 == "America/New_York"
+tptz <-  ymd_hms(invoiceList$訂單時區之下單時間[log1],tz="Asia/Taipei")
+nytz <-  ymd_hms(invoiceList$訂單時區之下單時間[log2],tz="America/New_York")
+invoiceList$UTC時間[log1] <- with_tz(tptz,tzone="UTC")
+invoiceList$UTC時間[log2] <- with_tz(nytz,tzone="UTC")
+invoiceList
+```
+
