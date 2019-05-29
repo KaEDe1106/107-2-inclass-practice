@@ -63,7 +63,42 @@ demand_supply_fun <- function(P,a,b,c,d){
 
 ```
 
+依條件執行
 
+```{r}
+supply_fun3 <- function(P,a,b){
+  Qs <- a+b*P
+  if(P < 0) {
+    message("P cannot be negative") 
+  } else {
+    return(Qs)
+  }
+}
+supply_fun3(P=-1,0,1)
+supply_fun3(P=2,0,1)
+```
+
+gpa_fun, 若輸入學號不存在則在螢幕顯示“查無此學號”。
+```{r}
+library(readr)
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+
+gpa_fun <- function(studentID){
+  if(studentID %in% transcriptDataFinal$學號){
+    transcriptDataFinal$學號==studentID -> logiChosenStudent
+    subSample <- transcriptDataFinal[logiChosenStudent,]
+    sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+    return(GPA)
+  }else{
+    message("cannot find the studend ID")
+  }
+  
+}
+
+gpa_fun("92aS67fee") # 顯示82.85276
+gpa_fun("aa829838s") # 查無此學號
+```
 
 
 
