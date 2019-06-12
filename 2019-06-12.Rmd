@@ -26,3 +26,57 @@ for(i in seq_along(gmailAddress)){
 gmailAddress
 ```
 
+```{r}
+load(url("https://www.dropbox.com/s/qnz9paigf61yjus/commitHistory.Rda?raw=1"))
+```
+
+```{r}
+for(i in seq_along(commitHistory)){
+  print(commitHistory[[i]]$commit$author$name)
+}
+```
+
+
+print每個commit的committer
+```{r}
+for(i in seq_along(commitHistory)){
+  print(commitHistory[[i]]$commit$committer$name)
+}
+```
+
+存下來每個author與committer同人的commitDate
+
+```{r}
+for(i in seq_along(commitHistory)){
+  log1 <- commitHistory[[i]]$commit$author$name == commitHistory[[i]]$commit$committer$name
+  cat(log1)
+}
+```
+
+創造"容器"
+```{r}
+saveCharacter <- vector("character",5)
+saveCharacter
+
+saveNumeric <- vector("numeric",5)
+saveNumeric
+
+saveLogical <- vector("logical",5)
+saveLogical
+
+saveList <- vector("list",5)
+saveList
+```
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
