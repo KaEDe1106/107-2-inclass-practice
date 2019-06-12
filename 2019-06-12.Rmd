@@ -68,8 +68,30 @@ saveList <- vector("list",5)
 saveList
 ```
 
-```{r}
 
+任務一：存下來每個commit的author。
+任務二：存下來每個commit的committer。
+```{r}
+library(lubridate)
+vecAuthor <- vector("character",length(commitHistory))
+for(i in seq_along(commitHistory)){
+  vecAuthor[[i]] <- commitHistory[[i]]$commit$author$name
+}
+
+vecCommiter <- vector("character",length(commitHistory))
+for(i in seq_along(commitHistory)){
+  vecCommiter[[i]] <- commitHistory[[i]]$commit$committer$name
+}
+
+
+
+vecChaDate <- vector("character",length(commitHistory))
+for(i in seq_along(commitHistory)){
+  if(commitHistory[[i]]$commit$author$name==commitHistory[[i]]$commit$committer$name){
+    vecChaDate[[i]] <- commitHistory[[i]]$commit$committer$date
+  }
+}
+vecChaDate
 ```
 
 
